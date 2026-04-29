@@ -40,3 +40,10 @@
 - Added shimmer animations on CTA buttons, gradient text on heading
 - Scroll-reveal fade-up animations on all major sections via IntersectionObserver
 - Added floating badge, pulsing offer banner, and hovering micro-interactions throughout
+
+## 2026-04-29 — Mobile Layout Adjustments
+**What**: Reordered layout on mobile devices
+**Why**: Client requested form/map to appear before the text content on small screens
+**Files Changed**: `index.html`
+- Updated `.hero-inner` to `flex-direction: column-reverse` on screens under 768px
+- Updated `.contact-grid` to `flex-direction: column-reverse` on screens under 768px
