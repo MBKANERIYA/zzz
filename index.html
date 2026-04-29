@@ -1,7 +1,10 @@
 <!-- Title Tag: Accounting & Tax Services Sydney | TaxFlow Accounting Services -->
 <!-- Meta Description: Sydney-based registered tax agent and CPA-led firm. Tax returns, bookkeeping, BAS, payroll, and business advisory. Book a free consultation with TaxFlow today. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet">
 
 <style>
   .tf * {
@@ -11,7 +14,7 @@
   }
 
   .tf {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     color: #0f172a;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -87,33 +90,28 @@
     transform: translateY(-2px)
   }
 
-  /* Hero */
+  /* ===== HERO ===== */
   .tf .hero {
     position: relative;
-    min-height: 580px;
+    min-height: 620px;
     display: flex;
     align-items: center;
     overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 0
+    background: linear-gradient(145deg, #f0f4ff, #eef2ff, #f8fafc)
   }
 
-  .tf .hero-bg {
-    position: absolute;
-    inset: 0
-  }
-
-  .tf .hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover
-  }
-
-  .tf .hero-bg::after {
+  .tf .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(2, 6, 23, .94), rgba(15, 23, 42, .88), rgba(30, 64, 175, .5))
+    background:
+      radial-gradient(ellipse 60% 50% at 10% 50%, rgba(37, 99, 235, .05), transparent 70%),
+      radial-gradient(ellipse 40% 50% at 90% 40%, rgba(99, 102, 241, .04), transparent 60%);
+    pointer-events: none
+  }
+
+  .tf .hero-bg {
+    display: none
   }
 
   .tf .hero-inner {
@@ -121,83 +119,155 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 50px 50px;
+    gap: 56px;
+    padding: 72px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
     width: 100%
   }
 
   .tf .hero-c {
     flex: 1;
-    color: #fff;
     min-width: 0
   }
 
-  .tf .hero h1 {
-    font-size: 2.4em;
-    font-weight: 900;
-    line-height: 1.12;
-    margin-bottom: 18px;
-    letter-spacing: -.03em
+  .tf .hero .badge {
+    background: rgba(37, 99, 235, .08);
+    color: #2563eb;
+    border: 1px solid rgba(37, 99, 235, .15);
+    border-radius: 6px;
+    animation: none
   }
 
-  .tf .hero h1 span {
-    color: #5ba8ff
+  .tf .hero .badge svg {
+    width: 14px;
+    height: 14px;
+    fill: #2563eb
+  }
+
+  .tf .hero h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(2.4rem, 3.5vw + 1rem, 3.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+    color: #0f172a;
+    margin-bottom: 22px;
+    letter-spacing: -.02em
+  }
+
+  .tf .hero h1 em {
+    font-style: italic;
+    color: #2563eb
   }
 
   .tf .hero p {
-    font-size: 1.05em;
-    opacity: .92;
+    font-size: 1.05rem;
+    color: #475569;
     line-height: 1.75;
-    margin-bottom: 14px
+    margin-bottom: 32px;
+    max-width: 52ch;
+    opacity: 1
+  }
+
+  .tf .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 44px
+  }
+
+  .tf .hero-cta .btn-p {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, .3);
+    border-radius: 10px
+  }
+
+  .tf .hero-cta .btn-p:hover {
+    box-shadow: 0 10px 32px rgba(37, 99, 235, .4);
+    transform: translateY(-2px)
+  }
+
+  .tf .hero-cta .btn-p::before {
+    display: none
+  }
+
+  .tf .hero-cta .btn-o {
+    color: #475569;
+    border: 1.5px solid #cbd5e1;
+    margin-left: 0;
+    backdrop-filter: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 28px;
+    border-radius: 10px
+  }
+
+  .tf .hero-cta .btn-o:hover {
+    color: #2563eb;
+    background: rgba(37, 99, 235, .04);
+    border-color: #2563eb;
+    transform: translateY(-2px)
   }
 
   .tf .hero-stats {
     display: flex;
-    gap: 32px;
-    margin-top: 28px
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(37, 99, 235, .1);
+    margin-top: 0
   }
 
   .tf .hero-stats div strong {
     display: block;
-    font-size: 1.7em;
-    font-weight: 800;
-    color: #5ba8ff
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #2563eb
   }
 
   .tf .hero-stats div span {
-    font-size: .82em;
-    opacity: .8
+    font-size: .75rem;
+    color: #64748b;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    opacity: 1
   }
 
   /* Hero Contact Form */
   .tf .hero-form-wrap {
-    flex: 0 0 460px;
-    max-width: 480px
+    flex: 0 0 420px;
+    max-width: 440px
   }
 
   .tf .hero-form {
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: blur(24px) saturate(1.5);
-    -webkit-backdrop-filter: blur(24px) saturate(1.5);
-    border: 1px solid rgba(255, 255, 255, .15);
-    border-radius: 24px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
     padding: 32px 28px;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .1)
+    box-shadow: 0 12px 48px rgba(37, 99, 235, .08), 0 2px 6px rgba(0, 0, 0, .03);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    animation: none
   }
 
   .tf .hero-form-title {
-    color: #fff;
-    font-size: 1.25em;
-    font-weight: 700;
+    color: #0f172a;
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 400;
     margin-bottom: 4px;
     text-align: center
   }
 
   .tf .hero-form-sub {
-    color: rgba(255, 255, 255, .75);
-    font-size: .88em;
+    color: #64748b;
+    font-size: .85rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     line-height: 1.5
   }
 
@@ -207,11 +277,11 @@
 
   .tf .hero-form label {
     display: block;
-    color: rgba(255, 255, 255, .85);
-    font-size: .82em;
+    color: #475569;
+    font-size: .72rem;
     font-weight: 600;
     margin-bottom: 5px;
-    letter-spacing: .3px;
+    letter-spacing: .5px;
     text-transform: uppercase
   }
 
@@ -220,41 +290,40 @@
   .tf .hero-form textarea {
     width: 100%;
     padding: 12px 14px;
-    background: rgba(255, 255, 255, .1);
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    color: #fff;
-    font-size: .95em;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #0f172a;
+    font-size: .92rem;
     font-family: inherit;
     outline: none;
-    transition: all .3s
+    transition: border-color .3s, box-shadow .3s
   }
 
   .tf .hero-form input::placeholder,
   .tf .hero-form textarea::placeholder {
-    color: rgba(255, 255, 255, .45)
+    color: #94a3b8
   }
 
   .tf .hero-form input:focus,
   .tf .hero-form select:focus,
   .tf .hero-form textarea:focus {
-    border-color: #5ba8ff;
-    background: rgba(255, 255, 255, .15);
-    box-shadow: 0 0 0 3px rgba(91, 168, 255, .2)
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .1)
   }
 
   .tf .hero-form select {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='rgba(255,255,255,0.6)'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='rgba(100,116,139,0.6)'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center
   }
 
   .tf .hero-form select option {
-    background: #1a2332;
-    color: #fff
+    background: #fff;
+    color: #0f172a
   }
 
   .tf .hero-form textarea {
@@ -273,39 +342,31 @@
 
   .tf .hero-form-btn {
     width: 100%;
-    padding: 15px 24px;
+    padding: 14px 24px;
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: #fff;
     border: none;
-    border-radius: 12px;
-    font-size: 1.05em;
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all .35s cubic-bezier(.25, .8, .25, 1);
+    transition: all .3s cubic-bezier(.25, 1, .5, 1);
     font-family: inherit;
     letter-spacing: .3px;
     margin-top: 6px;
-    position: relative;
-    overflow: hidden;
+    position: static;
+    overflow: visible;
     box-shadow: 0 4px 16px rgba(37, 99, 235, .3)
   }
 
   .tf .hero-form-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, .5)
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, .4)
   }
 
+  .tf .hero-form-btn::before,
   .tf .hero-form-btn::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, .15), transparent);
-    opacity: 0;
-    transition: opacity .3s
-  }
-
-  .tf .hero-form-btn:hover::after {
-    opacity: 1
+    display: none
   }
 
   .tf .hero-form-secure {
@@ -314,14 +375,14 @@
     justify-content: center;
     gap: 6px;
     margin-top: 12px;
-    color: rgba(255, 255, 255, .55);
-    font-size: .78em
+    color: #94a3b8;
+    font-size: .72rem
   }
 
   .tf .hero-form-secure svg {
     width: 13px;
     height: 13px;
-    fill: rgba(255, 255, 255, .55)
+    fill: #94a3b8
   }
 
   /* Trust Bar */
@@ -379,7 +440,18 @@
   .tf .split-img {
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .1)
+    max-height: 400px;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  .tf .split-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%
   }
 
   .tf .slist {
@@ -470,8 +542,8 @@
   }
 
   .tf .who-tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 12px
   }
 
@@ -741,60 +813,475 @@
     border-radius: 12px
   }
 
+  /* ===== MOBILE HERO ===== */
+  .tf .hero-mobile {
+    display: none
+  }
+
   @media(max-width:768px) {
-    .tf .hero-inner {
-      flex-direction: column;
-      padding: 36px 20px
-    }
-
-    .tf .hero-c {
-      padding: 0
-    }
-
-    .tf .hero h1 {
-      font-size: 1.7em
-    }
-
-    .tf .hero-stats {
-      flex-direction: column;
-      gap: 14px
-    }
-
-    .tf .hero-form-wrap {
-      flex: none;
-      width: 100%;
-      max-width: 100%
-    }
-
-    .tf .hero-form .form-row {
-      flex-direction: column;
-      gap: 0
-    }
-
-    .tf .split,
-    .tf .who-grid {
-      grid-template-columns: 1fr
-    }
-
-    .tf .cards {
-      grid-template-columns: 1fr
-    }
-
-    .tf .steps {
-      flex-direction: column;
-      gap: 20px
-    }
-
-    .tf .steps::before {
+    .tf .hero {
       display: none
     }
 
+    .tf .hero-mobile {
+      display: block;
+      background: linear-gradient(160deg, #f0f4ff, #eef2ff, #f8fafc);
+      padding: 36px 20px 32px;
+      text-align: center
+    }
+
+    .tf .hero-mobile .hm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 99, 235, .08);
+      color: #2563eb;
+      border: 1px solid rgba(37, 99, 235, .15);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .tf .hero-mobile .hm-badge svg {
+      width: 12px;
+      height: 12px;
+      fill: #2563eb
+    }
+
+    .tf .hero-mobile h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(2rem, 8vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #0f172a;
+      margin-bottom: 14px;
+      letter-spacing: -.02em
+    }
+
+    .tf .hero-mobile h1 em {
+      font-style: italic;
+      color: #2563eb
+    }
+
+    .tf .hero-mobile .hm-sub {
+      font-size: .92rem;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .tf .hero-mobile .hm-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px
+    }
+
+    .tf .hero-mobile .hm-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: all .3s cubic-bezier(.25, 1, .5, 1)
+    }
+
+    .tf .hero-mobile .hm-cta .hm-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, .3)
+    }
+
+    .tf .hero-mobile .hm-cta .hm-phone {
+      background: #fff;
+      color: #0f172a;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04)
+    }
+
+    .tf .hero-mobile .hm-cta .hm-phone svg {
+      width: 18px;
+      height: 18px;
+      fill: #2563eb
+    }
+
+    .tf .hero-mobile .hm-stats {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-wrap: wrap
+    }
+
+    .tf .hero-mobile .hm-stat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: .72rem;
+      font-weight: 600;
+      color: #334155
+    }
+
+    .tf .hero-mobile .hm-stat svg {
+      width: 14px;
+      height: 14px;
+      fill: #2563eb
+    }
+
+    .tf .hero-mobile .hm-form {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 32px rgba(37, 99, 235, .06);
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto
+    }
+
+    .tf .hero-mobile .hm-form-title {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.15rem;
+      color: #0f172a;
+      text-align: center;
+      margin-bottom: 16px
+    }
+
+    .tf .hero-mobile .hm-form input,
+    .tf .hero-mobile .hm-form select {
+      width: 100%;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      color: #0f172a;
+      font-size: .9rem;
+      font-family: inherit;
+      outline: none;
+      margin-bottom: 10px;
+      transition: border-color .3s
+    }
+
+    .tf .hero-mobile .hm-form input:focus,
+    .tf .hero-mobile .hm-form select:focus {
+      border-color: #2563eb
+    }
+
+    .tf .hero-mobile .hm-form input::placeholder {
+      color: #94a3b8
+    }
+
+    .tf .hero-mobile .hm-form select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='rgba(100,116,139,0.6)'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      cursor: pointer
+    }
+
+    .tf .hero-mobile .hm-form-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, .3);
+      margin-top: 4px
+    }
+
+    .tf .hero-mobile .hm-form-secure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: .68rem
+    }
+
+    .tf .hero-mobile .hm-form-secure svg {
+      width: 11px;
+      height: 11px;
+      fill: #94a3b8
+    }
+
+    /* Mobile entrance */
+    .tf .hero-mobile h1,
+    .tf .hero-mobile .hm-sub,
+    .tf .hero-mobile .hm-cta,
+    .tf .hero-mobile .hm-stats,
+    .tf .hero-mobile .hm-form {
+      opacity: 0;
+      animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) forwards
+    }
+
+    .tf .hero-mobile h1 {
+      animation-delay: .15s
+    }
+
+    .tf .hero-mobile .hm-sub {
+      animation-delay: .3s
+    }
+
+    .tf .hero-mobile .hm-cta {
+      animation-delay: .45s
+    }
+
+    .tf .hero-mobile .hm-stats {
+      animation-delay: .55s
+    }
+
+    .tf .hero-mobile .hm-form {
+      animation-delay: .65s
+    }
+
+    /* Trust bar */
+    .tf .trust {
+      padding: 12px 16px
+    }
+
+    .tf .trust-in {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 16px
+    }
+
+    .tf .trust-i {
+      font-size: .72rem;
+      white-space: nowrap
+    }
+
+    /* Credibility 4-col → 2×2 */
+    .tf .tf-reveal>[style*="grid-template-columns:repeat(4"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+      padding: 0 !important
+    }
+
+    .tf .tf-reveal>[style*="grid-template-columns:repeat(4"]>div {
+      padding: 20px 14px !important
+    }
+
+    .tf .tf-reveal>[style*="grid-template-columns:repeat(4"]>div>div:first-child {
+      font-size: 1.8em !important;
+      margin-bottom: 6px !important
+    }
+
+    .tf .tf-reveal>[style*="grid-template-columns:repeat(4"]>div>div:nth-child(2) {
+      font-size: 1.1em !important
+    }
+
+    .tf .tf-reveal>[style*="grid-template-columns:repeat(4"]>div>p {
+      font-size: .78em !important;
+      line-height: 1.5 !important
+    }
+
+    /* Section headings */
+    .tf section {
+      padding: 36px 16px !important
+    }
+
+    .tf h2 {
+      font-size: 1.35rem !important;
+      line-height: 1.3
+    }
+
+    .tf section h2+p,
+    .tf section>div[style*="text-align:center"] p {
+      font-size: .9rem !important;
+      padding: 0 8px
+    }
+
+    /* Split sections (services) */
+    .tf .split,
+    .tf .who-grid {
+      grid-template-columns: 1fr;
+      gap: 24px
+    }
+
+    .tf .split-img {
+      order: -1
+    }
+
+    .tf .split-img img {
+      border-radius: 12px;
+      max-height: 320px;
+      object-fit: cover;
+      width: 100%
+    }
+
+    .tf .slist li {
+      font-size: .88rem;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      line-height: 1.6
+    }
+
+    /* Why choose cards */
+    .tf .cards {
+      grid-template-columns: 1fr;
+      gap: 14px
+    }
+
+    .tf .card {
+      padding: 20px 18px
+    }
+
+    .tf .card h3 {
+      font-size: 1rem
+    }
+
+    .tf .card p {
+      font-size: .85rem
+    }
+
+    /* Why section bg fix */
+    .tf section[style*="border-radius:24px"] {
+      border-radius: 16px !important;
+      padding: 36px 18px !important
+    }
+
+    /* Who we work with */
+    .tf .who-grid {
+      grid-template-columns: 1fr;
+      gap: 0
+    }
+
+    .tf .who-grid>.split-img {
+      display: none
+    }
+
+    .tf .who-tags {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .tf .who-tag {
+      padding: 14px 12px;
+      font-size: .8rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px
+    }
+
+    .tf .who-tag svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-bottom: 4px
+    }
+
+    .tf .who-tag em {
+      font-size: .7rem;
+      line-height: 1.4
+    }
+
+    /* Steps — vertical timeline */
+    .tf .steps {
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 28px
+    }
+
+    .tf .steps::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      left: 14px;
+      width: 2px;
+      background: linear-gradient(180deg, #2563eb, #93c5fd);
+      border-radius: 2px
+    }
+
+    .tf .step {
+      display: block;
+      text-align: left;
+      padding: 16px 18px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      position: relative;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .03)
+    }
+
+    .tf .step:last-child {
+      margin-bottom: 0
+    }
+
+    .tf .step-n {
+      width: 28px;
+      height: 28px;
+      font-size: .7rem;
+      margin: 0 0 8px;
+      position: absolute;
+      left: -36px;
+      top: 16px;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, .25)
+    }
+
+    .tf .step h3 {
+      font-size: .95rem;
+      margin-bottom: 4px;
+      color: #0f172a
+    }
+
+    .tf .step p {
+      font-size: .82rem;
+      color: #64748b;
+      line-height: 1.55;
+      margin: 0
+    }
+
+    /* Split reverse fix */
     .tf .split-r {
       direction: ltr
     }
 
+    /* FAQ */
+    .tf .accordion {
+      max-width: 100%
+    }
+
+    .tf .acc-btn {
+      font-size: .88rem;
+      padding: 14px 16px
+    }
+
+    .tf .acc-body-inner {
+      font-size: .84rem;
+      padding: 10px 16px 16px
+    }
+
+    /* Contact section */
     .tf .contact-sec {
-      padding: 36px 20px
+      padding: 36px 16px
     }
 
     .tf .contact-grid {
@@ -804,49 +1291,43 @@
     }
 
     .tf .contact-map iframe {
-      height: 280px
+      height: 260px
+    }
+
+    .tf .contact-item {
+      padding: 12px 0
+    }
+
+    .tf .contact-title {
+      font-size: 1rem
+    }
+
+    .tf .contact-desc {
+      font-size: .85rem
+    }
+
+    /* Footer */
+    .tf .footer {
+      padding: 36px 16px 20px
+    }
+
+    .tf .footer-grid {
+      grid-template-columns: 1fr !important;
+      gap: 28px
+    }
+
+    .tf .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 8px
     }
   }
 
-  /* ===== CATCHY ANIMATIONS ===== */
-  @keyframes tf-pulse {
-
-    0%,
-    100% {
-      box-shadow: 0 0 0 0 rgba(37, 99, 235, .4)
-    }
-
-    50% {
-      box-shadow: 0 0 0 14px rgba(37, 99, 235, 0)
-    }
-  }
-
-  @keyframes tf-shimmer {
-    0% {
-      background-position: -200% 0
-    }
-
-    100% {
-      background-position: 200% 0
-    }
-  }
-
-  @keyframes tf-float {
-
-    0%,
-    100% {
-      transform: translateY(0)
-    }
-
-    50% {
-      transform: translateY(-6px)
-    }
-  }
-
+  /* ===== HERO ENTRANCE ANIMATIONS ===== */
   @keyframes tf-fadeUp {
     from {
       opacity: 0;
-      transform: translateY(30px)
+      transform: translateY(24px)
     }
 
     to {
@@ -855,70 +1336,78 @@
     }
   }
 
-  @keyframes tf-glow {
-
-    0%,
-    100% {
-      box-shadow: 0 0 24px rgba(37, 99, 235, .25)
+  @keyframes tf-fadeIn {
+    from {
+      opacity: 0
     }
 
-    50% {
-      box-shadow: 0 0 48px rgba(37, 99, 235, .5), 0 0 80px rgba(37, 99, 235, .15)
+    to {
+      opacity: 1
     }
   }
 
-  @keyframes tf-slideIn {
+  @keyframes tf-slideUp {
     from {
       opacity: 0;
-      transform: translateX(-20px)
+      transform: translateY(16px)
     }
 
     to {
       opacity: 1;
-      transform: translateX(0)
+      transform: translateY(0)
     }
   }
 
-  /* Pulsing offer banner */
-  .tf .hero-form .tf-offer {
-    animation: tf-pulse 2s infinite
-  }
-
-  /* Floating badge */
+  /* Hero entrance choreography */
   .tf .hero .badge {
-    animation: tf-float 3s ease-in-out infinite
+    opacity: 0;
+    animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) .2s forwards
   }
 
-  /* Shimmer CTA button */
-  .tf .btn-p {
-    position: relative;
-    overflow: hidden
+  .tf .hero h1 {
+    opacity: 0;
+    animation: tf-fadeUp .7s cubic-bezier(.25, 1, .5, 1) .35s forwards
   }
 
-  .tf .btn-p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .25), transparent);
-    animation: tf-shimmer 3s infinite
+  .tf .hero p {
+    opacity: 0;
+    animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) .5s forwards
   }
 
-  /* Glowing form */
-  .tf .hero-form {
-    animation: tf-glow 4s ease-in-out infinite
+  .tf .hero-cta {
+    opacity: 0;
+    animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) .65s forwards
   }
 
-  /* Gradient heading */
-  .tf .hero h1 span {
-    background: linear-gradient(135deg, #60a5fa, #a78bfa, #818cf8, #60a5fa);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: tf-shimmer 5s linear infinite
+  .tf .hero-stats {
+    opacity: 0;
+    animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) .8s forwards
+  }
+
+  .tf .hero-form-wrap {
+    opacity: 0;
+    animation: tf-fadeUp .7s cubic-bezier(.25, 1, .5, 1) .5s forwards
+  }
+
+  /* Button hover lift */
+  .tf .hero-cta .btn-p,
+  .tf .hero-cta .btn-o,
+  .tf .hero-form-btn {
+    transition: all .3s cubic-bezier(.25, 1, .5, 1)
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+
+    .tf .hero .badge,
+    .tf .hero h1,
+    .tf .hero p,
+    .tf .hero-cta,
+    .tf .hero-stats,
+    .tf .hero-form-wrap {
+      opacity: 1;
+      animation: none
+    }
   }
 
   /* Scroll reveal */
@@ -1000,22 +1489,6 @@
     background: #f0f5ff
   }
 
-  /* Form submit button shimmer */
-  .tf .hero-form-btn {
-    position: relative;
-    overflow: hidden
-  }
-
-  .tf .hero-form-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
-    animation: tf-shimmer 2.5s infinite
-  }
 
   /* Contact section hover */
   .tf .contact-item {
@@ -1052,46 +1525,32 @@
 
 <div class="tf">
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== DESKTOP HERO ===== -->
   <div class="hero">
-    <div class="hero-bg"><img src="images/hero-accounting.png" alt="TaxFlow Accounting Services Sydney"></div>
     <div class="hero-inner">
       <div class="hero-c">
-        <span class="badge">Registered Tax Agent &bull; CPA-Led</span>
-        <h1>Australian Accounting & Tax Services by Your Local <span>Registered Tax Agent</span> Pooja Chillana — For
-          All Individuals & Businesses</h1>
-        <p>Whether you're an employee chasing a better refund, a tradie juggling receipts, or a business owner who needs
-          the numbers to actually make sense — TaxFlow Accounting Services is here to help. We're a registered tax agent
-          and CPA-led accounting firm based in Sydney, and we make accounting, tax, and business advisory
-          straightforward, accurate, and genuinely useful.</p>
-        <p>We work with individuals and businesses across Sydney — 📍 Harris Park, 📍 Marsden Park, and 📍 Greenway
-          Village Colebee — as
-          well as clients right across Australia through our online service.</p>
-        <div>
-          <a href="/contact" class="btn btn-p">Book a Free Consultation</a>
-          <a href="#services" class="btn btn-o">Our Services ↓</a>
+        <span class="badge"><svg viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+          </svg> Registered Tax Agent &bull; CPA Qualified</span>
+        <h1>Stop Leaving Money<br><em>on the Table.</em></h1>
+        <p>Sydney's CPA-qualified registered tax agents. Maximum legal deductions, 72-hour turnaround, full ATO
+          compliance — for individuals and businesses across Australia.</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-p">Book Free Consultation</a>
+          <a href="#services" class="btn btn-o">See our services &#8594;</a>
         </div>
         <div class="hero-stats">
-          <div><strong>24–72hr</strong><span>Tax Return Turnaround</span></div>
+          <div><strong>72hr</strong><span>Turnaround</span></div>
           <div><strong>100%</strong><span>ATO Compliant</span></div>
-          <div><strong>Australia</strong><span>Wide Online Service</span></div>
+          <div><strong>All AU</strong><span>Online Service</span></div>
         </div>
       </div>
 
       <!-- Contact Form -->
       <div class="hero-form-wrap">
         <form class="hero-form" id="heroContactForm" onsubmit="return handleHeroForm(event)">
-          <div class="tf-offer"
-            style="background:linear-gradient(135deg,#1a5bb5,#0d3b80);border-radius:10px;padding:12px 16px;margin-bottom:16px;text-align:center;">
-            <div
-              style="font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.85);margin-bottom:2px;">
-              Limited Time Offer</div>
-            <div style="font-size:1.15em;font-weight:800;color:#fff;">REGISTER NOW &amp; GET <span
-                style="font-size:1.3em;">$29 OFF</span></div>
-            <div style="font-size:.78em;color:rgba(255,255,255,.85);margin-top:2px;">on your first enquiry</div>
-          </div>
-          <div class="hero-form-title">Free Consultation</div>
-          <div class="hero-form-sub">Fill in your details and we'll get back to you within 24 hours.</div>
+          <div class="hero-form-title">Free Tax Consultation</div>
+          <div class="hero-form-sub">Tell us your situation — we'll find the savings.</div>
           <div class="form-row">
             <div class="form-group">
               <label for="heroName">Full Name</label>
@@ -1137,6 +1596,53 @@
     </div>
   </div>
 
+  <!-- ===== MOBILE HERO ===== -->
+  <div class="hero-mobile">
+    <span class="hm-badge"><svg viewBox="0 0 24 24">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+      </svg> Registered Tax Agent</span>
+    <h1>Stop Leaving Money <em>on the Table.</em></h1>
+    <p class="hm-sub">CPA-qualified tax agents in Sydney. Maximum deductions. 72-hour turnaround.</p>
+    <div class="hm-cta">
+      <a href="/contact" class="hm-primary">Book Free Consultation</a>
+      <a href="tel:0477400929" class="hm-phone"><svg viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.24 1.01l-2.21 2.2z" />
+        </svg> Call 0477 400 929</a>
+    </div>
+    <div class="hm-stats">
+      <div class="hm-stat"><svg viewBox="0 0 24 24">
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+        </svg> 72hr Turnaround</div>
+      <div class="hm-stat"><svg viewBox="0 0 24 24">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+        </svg> ATO Compliant</div>
+      <div class="hm-stat"><svg viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+        </svg> All Australia</div>
+    </div>
+    <form class="hm-form" id="mobileContactForm" onsubmit="return handleHeroForm(event)">
+      <div class="hm-form-title">Get a Free Quote</div>
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="tel" name="phone" placeholder="Phone number" required>
+      <select name="service" required>
+        <option value="" disabled selected>What do you need?</option>
+        <option value="tax-return">Personal Tax Return</option>
+        <option value="business-tax">Business Tax &amp; BAS</option>
+        <option value="bookkeeping">Bookkeeping &amp; Payroll</option>
+        <option value="company-setup">Company Setup</option>
+        <option value="other">Other / Not Sure</option>
+      </select>
+      <button type="submit" class="hm-form-btn">Get Free Quote &#8594;</button>
+      <div class="hm-form-secure"><svg viewBox="0 0 24 24">
+          <path
+            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z" />
+        </svg> Secure &amp; confidential</div>
+    </form>
+  </div>
+
   <!-- ===== TRUST BAR ===== -->
   <div class="trust">
     <div class="trust-in">
@@ -1166,7 +1672,10 @@
         <div
           style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2563eb,#60a5fa);">
         </div>
-        <div style="font-size:2.4em;margin-bottom:8px;">🛡️</div>
+        <div style="font-size:2.4em;margin-bottom:8px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="#2563eb">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+          </svg></div>
         <div style="font-size:1.5em;font-weight:800;color:#1e40af;margin-bottom:6px;">TPB Registered</div>
         <p style="font-size:.88em;color:#64748b;line-height:1.65;">Fully registered with the Tax Practitioners Board —
           your returns are legally compliant and audit-safe.</p>
@@ -1176,7 +1685,9 @@
         <div
           style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7c3aed,#a78bfa);">
         </div>
-        <div style="font-size:2.4em;margin-bottom:8px;">🎓</div>
+        <div style="font-size:2.4em;margin-bottom:8px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="#7c3aed">
+            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+          </svg></div>
         <div style="font-size:1.5em;font-weight:800;color:#1e40af;margin-bottom:6px;">CPA Qualified</div>
         <p style="font-size:.88em;color:#64748b;line-height:1.65;">Led by Certified Practising Accountants with deep
           expertise in Australian tax law and business advisory.</p>
@@ -1186,7 +1697,10 @@
         <div
           style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0891b2,#67e8f9);">
         </div>
-        <div style="font-size:2.4em;margin-bottom:8px;">☁️</div>
+        <div style="font-size:2.4em;margin-bottom:8px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="#0891b2">
+            <path
+              d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+          </svg></div>
         <div style="font-size:1.5em;font-weight:800;color:#1e40af;margin-bottom:6px;">Cloud-Based</div>
         <p style="font-size:.88em;color:#64748b;line-height:1.65;">We work on Xero, MYOB, and QuickBooks — real-time
           access to your financials from anywhere in Australia.</p>
@@ -1196,7 +1710,9 @@
         <div
           style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24);">
         </div>
-        <div style="font-size:2.4em;margin-bottom:8px;">⭐</div>
+        <div style="font-size:2.4em;margin-bottom:8px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="#f59e0b">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg></div>
         <div style="font-size:1.5em;font-weight:800;color:#1e40af;margin-bottom:6px;">Client-First</div>
         <p style="font-size:.88em;color:#64748b;line-height:1.65;">Transparent pricing, year-round availability, and
           personalised advice — no cookie-cutter solutions.</p>
@@ -1215,8 +1731,8 @@
 
     <!-- For Individuals -->
     <div class="split" style="margin-bottom:56px;">
-      <div class="split-img"><img src="images/individual-services.png"
-          alt="Individual tax return and personal accounting services"></div>
+      <div class="split-img"><img src="images/pooja.png" style="transform:scaleX(-1)"
+          alt="Pooja — CPA-qualified accountant at TaxFlow Accounting Services"></div>
       <div>
         <span class="badge">For Individuals</span>
         <h2 style="font-size:1.55em;">Personal Tax &amp; Financial Services</h2>
@@ -1261,28 +1777,43 @@
     </div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);border:1px solid #93c5fd;">🏆
+        <div class="card-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);border:1px solid #93c5fd;"><svg
+            width="24" height="24" viewBox="0 0 24 24" fill="#2563eb">
+            <path
+              d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" />
+          </svg>
         </div>
         <h3>Registered Tax Agent and CPA-Led</h3>
         <p>Your returns and financial statements are prepared by qualified accountants who are registered with the Tax
           Practitioners Board. That means accuracy, compliance, and peace of mind — not guesswork.</p>
       </div>
       <div class="card">
-        <div class="card-icon" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);border:1px solid #6ee7b7;">🎯
+        <div class="card-icon" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);border:1px solid #6ee7b7;"><svg
+            width="24" height="24" viewBox="0 0 24 24" fill="#059669">
+            <path
+              d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-8c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z" />
+          </svg>
         </div>
         <h3>Built Around Your Situation</h3>
         <p>We don't offer cookie-cutter advice. Whether you're a sole trader claiming vehicle deductions or a company
           navigating GST on international sales, we adapt to your specific circumstances.</p>
       </div>
       <div class="card">
-        <div class="card-icon" style="background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fbbf24;">📅
+        <div class="card-icon" style="background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fbbf24;"><svg
+            width="24" height="24" viewBox="0 0 24 24" fill="#d97706">
+            <path
+              d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z" />
+          </svg>
         </div>
         <h3>Year-Round Support</h3>
         <p>Tax isn't seasonal for us. We're available throughout the year — not just the rush between July and October.
           If your financial situation changes mid-year, we're here to help you adjust.</p>
       </div>
       <div class="card">
-        <div class="card-icon" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);border:1px solid #a78bfa;">⚡
+        <div class="card-icon" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);border:1px solid #a78bfa;"><svg
+            width="24" height="24" viewBox="0 0 24 24" fill="#7c3aed">
+            <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+          </svg>
         </div>
         <h3>Fast, Reliable Turnaround</h3>
         <p>Most individual tax returns are lodged within 24 to 72 hours. BAS lodgements are often completed same-day. We
@@ -1300,14 +1831,36 @@
         <p style="color:#5a6a7e;margin-bottom:24px;">We serve a diverse range of clients across Sydney and Australia.
         </p>
         <div class="who-tags">
-          <div class="who-tag">👨‍💼 Employees<em>Looking to maximise their tax refund</em></div>
-          <div class="who-tag">💻 Freelancers and contractors<em>Managing their own ABN</em></div>
-          <div class="who-tag">🔧 Tradies<em>Who need help tracking expenses and deductions</em></div>
-          <div class="who-tag">🚗 Rideshare and delivery drivers<em>With complex income reporting</em></div>
-          <div class="who-tag">🏪 Small business owners<em>Who want clear financials and reliable compliance</em></div>
-          <div class="who-tag">📈 Investors<em>With property, shares, or crypto income</em></div>
-          <div class="who-tag">🚀 Startups<em>That need to set up the right structure from day one</em></div>
-          <div class="who-tag">🌏 New migrants<em>Applying for their TFN or ABN for the first time</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg> Employees<em>Looking to maximise their tax refund</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
+            </svg> Freelancers and contractors<em>Managing their own ABN</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+            </svg> Tradies<em>Who need help tracking expenses and deductions</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+            </svg> Rideshare and delivery drivers<em>With complex income reporting</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" />
+            </svg> Small business owners<em>Who want clear financials and reliable compliance</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+            </svg> Investors<em>With property, shares, or crypto income</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.05-4.05c.47-.47 1.15-.68 1.81-.55l1.33.26zM11.17 17s3.74-1.55 5.89-3.7c5.02-5.02 4.95-11.24 4.86-12.68-1.44-.1-7.67-.16-12.69 4.86C7.09 7.62 5.51 11.37 5.51 11.37l5.66 5.63zm5.07-8.24c-.78-.78-.78-2.05 0-2.83.78-.78 2.05-.78 2.83 0 .78.78.78 2.05 0 2.83-.78.78-2.05.78-2.83 0zM5.65 17.65c-.33.33-.88.49-1.41.49-1.63 0-2.24-1.58-2.24-1.58s-.05-1.37 1.58-1.58c.53-.07 1.07.09 1.41.49l.66.66z" />
+            </svg> Startups<em>That need to set up the right structure from day one</em></div>
+          <div class="who-tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2563eb">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+            </svg> New migrants<em>Applying for their TFN or ABN for the first time</em></div>
         </div>
       </div>
       <div class="split-img"><img src="images/clients-diverse.png"
