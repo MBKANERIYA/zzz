@@ -743,7 +743,7 @@
 
   @media(max-width:768px) {
     .tf .hero-inner {
-      flex-direction: column;
+      flex-direction: column-reverse;
       padding: 36px 20px
     }
 
@@ -798,7 +798,9 @@
     }
 
     .tf .contact-grid {
-      grid-template-columns: 1fr
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column-reverse;
     }
 
     .tf .contact-map iframe {
