@@ -1,5 +1,11 @@
-<!-- Title Tag: Accounting & Tax Services Sydney | TaxFlow Accounting Services -->
-<!-- Meta Description: Sydney-based registered tax agent and CPA-led firm. Tax returns, bookkeeping, BAS, payroll, and business advisory. Book a free consultation with TaxFlow today. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounting & Tax Services Sydney | TaxFlow Accounting Services</title>
+<meta name="description" content="Sydney-based registered tax agent and CPA-led firm. Tax returns, bookkeeping, BAS, payroll, and business advisory. Book a free consultation with TaxFlow today.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -1029,8 +1035,9 @@
     .tf .hero-mobile h1,
     .tf .hero-mobile .hm-sub,
     .tf .hero-mobile .hm-cta,
-    .tf .hero-mobile .hm-stats,
-    .tf .hero-mobile .hm-form {
+    .tf .hero-mobile .hm-form,
+    .tf .hero-mobile .hm-google-review,
+    .tf .hero-mobile .hm-stats {
       opacity: 0;
       animation: tf-fadeUp .6s cubic-bezier(.25, 1, .5, 1) forwards
     }
@@ -1047,12 +1054,27 @@
       animation-delay: .45s
     }
 
-    .tf .hero-mobile .hm-stats {
+    .tf .hero-mobile .hm-form {
       animation-delay: .55s
     }
 
-    .tf .hero-mobile .hm-form {
-      animation-delay: .65s
+    .tf .hero-mobile .hm-google-review {
+      text-align: center;
+      margin-top: 24px;
+      margin-bottom: 4px;
+      padding: 16px 12px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.03);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      animation-delay: .7s
+    }
+
+    .tf .hero-mobile .hm-stats {
+      animation-delay: .8s
     }
 
     /* Trust bar */
@@ -1071,9 +1093,9 @@
       white-space: nowrap
     }
 
-    /* Credibility 4-col → 2×2 */
+    /* Credibility 4-col → 1 column */
     .tf .tf-reveal>[style*="grid-template-columns:repeat(4"] {
-      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-columns: 1fr !important;
       gap: 12px !important;
       padding: 0 !important
     }
@@ -1319,6 +1341,124 @@
       flex-direction: column;
       text-align: center;
       gap: 8px
+    }
+
+    /* Service split images — constrain on mobile */
+    .tf .split>div[style*="position: relative"] {
+      max-width: 280px;
+      margin: 0 auto
+    }
+
+    .tf .split>div[style*="position: relative"] div[style*="aspect-ratio"] {
+      display: none
+    }
+
+    .tf .split>div[style*="position: relative"] img {
+      max-height: 320px !important
+    }
+
+    .tf .split>div[style*="position: relative"]>div[style*="border-radius: 24px"] {
+      border-radius: 16px !important
+    }
+
+    /* Partner logos — smaller on mobile */
+    .tf section[style*="padding: 50px 24px"] img[style*="height:130px"],
+    .tf section[style*="padding: 50px 24px"] img[style*="height:120px"] {
+      height: 70px !important
+    }
+
+    /* Contact email overflow */
+    .tf .contact-item-text a {
+      word-break: break-all;
+      font-size: .88em
+    }
+
+    /* Contact heading */
+    .tf .contact-grid h2 {
+      font-size: 1.3em !important
+    }
+
+    /* Service italic note */
+    .tf section>p[style*="font-style:italic"] {
+      font-size: .88rem !important;
+      padding: 0 8px
+    }
+
+    /* Buttons full width */
+    .tf .btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 14px 20px;
+      font-size: .95rem
+    }
+
+    .tf .btn-o {
+      margin-left: 0 !important;
+      margin-top: 10px
+    }
+
+    .tf .hero-cta {
+      flex-direction: column;
+      gap: 10px
+    }
+  }
+
+  /* ===== TABLET BREAKPOINT ===== */
+  @media(min-width:769px) and (max-width:1024px) {
+    .tf .hero-inner {
+      gap: 28px;
+      padding: 48px 32px
+    }
+
+    .tf .hero-form-wrap {
+      flex: 0 0 340px;
+      max-width: 360px
+    }
+
+    .tf .hero h1 {
+      font-size: 2.2rem
+    }
+
+    .tf section {
+      padding: 44px 20px
+    }
+
+    .tf .cards {
+      gap: 16px
+    }
+
+    .tf .card {
+      padding: 24px 20px
+    }
+
+    .tf .split {
+      gap: 28px
+    }
+
+    .tf .who-tags {
+      gap: 10px
+    }
+
+    .tf .who-tag {
+      padding: 14px 16px;
+      font-size: .88em
+    }
+
+    .tf .steps {
+      gap: 0
+    }
+
+    .tf .step p {
+      font-size: .82em
+    }
+
+    .tf .contact-sec {
+      padding: 44px 28px
+    }
+
+    .tf .contact-grid {
+      gap: 28px
     }
   }
 
@@ -1656,6 +1796,78 @@
             d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.24 1.01l-2.21 2.2z" />
         </svg> Call 0477 400 929</a>
     </div>
+    <form class="hm-form" id="mobileContactForm" onsubmit="return handleHeroForm(event)">
+      <div class="tf-offer"
+        style="background:linear-gradient(135deg,#2563eb,#1d4ed8);border-radius:10px;padding:12px 16px;margin-bottom:16px;text-align:center;">
+        <div
+          style="font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.85);margin-bottom:2px;">
+          Limited Time Offer</div>
+        <div style="font-size:1.15em;font-weight:800;color:#fff;">REGISTER NOW &amp; GET <span
+            style="font-size:1.3em;">$29 OFF</span></div>
+        <div style="font-size:.78em;color:rgba(255,255,255,.85);margin-top:2px;">on your first enquiry</div>
+      </div>
+      <div class="hm-form-title">Free Consultation</div>
+      <div style="color:#64748b;font-size:.82rem;text-align:center;margin-bottom:16px;line-height:1.5;">Tell us your situation — we'll find the savings.</div>
+      <div style="margin-bottom:10px;">
+        <label style="display:block;color:#475569;font-size:.72rem;font-weight:600;margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;">Full Name</label>
+        <input type="text" name="name" placeholder="John Smith" required>
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="display:block;color:#475569;font-size:.72rem;font-weight:600;margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;">Phone</label>
+        <input type="tel" name="phone" placeholder="04XX XXX XXX">
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="display:block;color:#475569;font-size:.72rem;font-weight:600;margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;">Email Address</label>
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="display:block;color:#475569;font-size:.72rem;font-weight:600;margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;">Service Needed</label>
+        <select name="service" required>
+          <option value="" disabled selected>Select a service…</option>
+          <option value="tax-return">Personal Tax Return</option>
+          <option value="business-tax">Business Tax &amp; BAS</option>
+          <option value="bookkeeping">Bookkeeping &amp; Payroll</option>
+          <option value="company-setup">Company Setup &amp; Structuring</option>
+          <option value="tax-planning">Tax Planning &amp; Advisory</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
+      </div>
+      <div style="margin-bottom:10px;">
+        <label style="display:block;color:#475569;font-size:.72rem;font-weight:600;margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase;">Message <span style="font-weight:400;text-transform:none;opacity:.7;">(optional)</span></label>
+        <textarea name="message" placeholder="Tell us briefly about your situation…" rows="3" style="width:100%;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-size:.9rem;font-family:inherit;outline:none;resize:vertical;min-height:70px;transition:border-color .3s;"></textarea>
+      </div>
+      <button type="submit" class="hm-form-btn">Request Free Consultation →</button>
+      <div class="hm-form-secure"><svg viewBox="0 0 24 24">
+          <path
+            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z" />
+        </svg> Your information is secure and confidential</div>
+    </form>
+    <div class="hm-google-review">
+      <div style="font-size:.85em;font-weight:700;color:#1e3a5f;">Trusted by over 3,500+ Australian businesses</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 92" width="70" height="24">
+          <path fill="#4285F4"
+            d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" />
+          <path fill="#EA4335"
+            d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" />
+          <path fill="#FBBC05"
+            d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z" />
+          <path fill="#4285F4" d="M225 3v65h-9.5V3h9.5z" />
+          <path fill="#34A853"
+            d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z" />
+          <path fill="#EA4335"
+            d="M35.29 41.19V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49-.01z" />
+        </svg>
+        <div style="display:flex;gap:2px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span style="font-weight:700;color:#1e3a5f;font-size:.85em;">4.8/5.0</span>
+      </div>
+    </div>
     <div class="hm-stats">
       <div class="hm-stat"><svg viewBox="0 0 24 24">
           <path
@@ -1669,24 +1881,6 @@
             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
         </svg> All Australia</div>
     </div>
-    <form class="hm-form" id="mobileContactForm" onsubmit="return handleHeroForm(event)">
-      <div class="hm-form-title">Get a Free Quote</div>
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="tel" name="phone" placeholder="Phone number" required>
-      <select name="service" required>
-        <option value="" disabled selected>What do you need?</option>
-        <option value="tax-return">Personal Tax Return</option>
-        <option value="business-tax">Business Tax &amp; BAS</option>
-        <option value="bookkeeping">Bookkeeping &amp; Payroll</option>
-        <option value="company-setup">Company Setup</option>
-        <option value="other">Other / Not Sure</option>
-      </select>
-      <button type="submit" class="hm-form-btn">Get Free Quote &#8594;</button>
-      <div class="hm-form-secure"><svg viewBox="0 0 24 24">
-          <path
-            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z" />
-        </svg> Secure &amp; confidential</div>
-    </form>
   </div>
 
   <div>
