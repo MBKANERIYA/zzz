@@ -1079,18 +1079,29 @@
 
     /* Trust bar */
     .tf .trust {
-      padding: 12px 16px
+      padding: 16px 16px
     }
 
     .tf .trust-in {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 16px
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px
     }
 
     .tf .trust-i {
       font-size: .72rem;
-      white-space: nowrap
+      white-space: nowrap;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 10px;
+      justify-content: flex-start;
+      box-shadow: 0 1px 3px rgba(0,0,0,.03)
+    }
+
+    .tf .trust-i svg {
+      width: 18px;
+      height: 18px
     }
 
     /* Credibility 4-col → 1 column */
