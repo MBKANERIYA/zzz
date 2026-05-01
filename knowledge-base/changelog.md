@@ -47,3 +47,13 @@
 **Files Changed**: `index.html`
 - Updated `.hero-inner` to `flex-direction: column-reverse` on screens under 768px
 - Updated `.contact-grid` to `flex-direction: column-reverse` on screens under 768px
+
+## 2026-05-01 — Header Bar Addition
+**What**: Added TaxFlow branded header bar to the top of the page
+**Why**: Client requested a header matching their brand design — logo on left, phone CTA on right
+**Files Changed**: `index.html`
+- Added `<header class="tf-header">` with SVG shield logo (black/gold), "TaxFlow" branding, and "ACCOUNTING SERVICES" subtitle
+- Right side features a "CALL US TODAY / 0477-400-929" clickable phone link with blue circle icon
+- Light gray background (#e8e8e8) with subtle bottom border
+- Fully responsive: scales down logo, text, and CTA for mobile (≤768px)
+- CSS scoped under `.tf .tf-header*` to avoid conflicts
