@@ -57,3 +57,17 @@
 - Light gray background (#e8e8e8) with subtle bottom border
 - Fully responsive: scales down logo, text, and CTA for mobile (≤768px)
 - CSS scoped under `.tf .tf-header*` to avoid conflicts
+
+## 2026-05-05 — Contact Form Email Integration (FormSubmit.co)
+**What**: Added FormSubmit.co integration to send hero consultation form submissions to mbkaneriya1998@gmail.com
+**Why**: Client wanted the "Request Free Consultation →" button to email form details — needed a pure client-side solution for WordPress (no backend)
+**Files Changed**: `index.html`
+- Uses FormSubmit.co free service — no API keys, no accounts, no backend needed
+- Sends form data via `fetch()` POST to `https://formsubmit.co/ajax/mbkaneriya1998@gmail.com`
+- Collects: name, phone, email, service, message
+- Added loading state (button shows "Sending..." and becomes disabled)
+- Added success state (green button + thank-you banner that auto-dismisses)
+- Added error state (red button + error banner with fallback phone number)
+- Form auto-resets after successful submission
+- Emails formatted as table template with custom subject line
+- **ONE-TIME STEP**: First submission triggers a verification email from FormSubmit — must click confirm link in inbox
